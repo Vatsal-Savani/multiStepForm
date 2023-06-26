@@ -1,0 +1,53 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+input{
+    padding: 15px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+
+label{
+    font-size: 12px;
+    color: gray;
+}
+
+.errMsg{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+input:invalid[focused="true"]{
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ .errMsg{
+    display: block;
+}
+
+.dropDownErr{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline{
+    outline: none;
+    border: 1px solid blue !important;
+  }
+
+.Mui-focused .MuiOutlinedInput-notchedOutline[focused="true"] {
+    border: 1px solid red !important;
+  }
+  
+  .Mui-focused .MuiOutlinedInput-notchedOutline:hover {
+    border-color: rgba(0, 0, 0, 0.23) !important;
+  }
+  

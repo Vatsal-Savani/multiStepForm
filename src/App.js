@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MultiStepForm from "./pages/MultiStepForm";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MultiStepForm />,
+  },
+]);
 
 function App() {
+  // const [image, setImage] = useState();
+
+  // const convertToBase64 = (e) => {
+  //   var reader = new FileReader();
+  //   reader.readAsDataURL(e.target.files[0]);
+  //   reader.onload = () => {
+  //     console.log(reader.result);
+  //     setImage(reader.result);
+  //   };
+  //   reader.onerror = (error) => {
+  //     console.log("Error: ", error);
+  //   };
+  // };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router} />
     </div>
   );
 }
